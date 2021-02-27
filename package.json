@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "run-s build:css server",
-    "server": "NODE_PATH=. nodemon bin/start.js",
+    "start": "nodemon --exec 'run-p build:css server' --watch src -e '*'",
+    "server": "NODE_PATH=. node bin/start.js",
     "build:css": "npx postcss src/app/styles/tailwind.css -o public/styles/style.css"
   },
   "keywords": [],
