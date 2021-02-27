@@ -1,6 +1,6 @@
 function createController() {
   function index(req, res) {
-    res.render('index/index', {
+    res.render('stock/index', {
       layout: 'main',
     })
   }
